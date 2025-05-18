@@ -1,6 +1,9 @@
 const newInput = document.getElementById('new-input');
 const currentTasks = document.getElementById('current-tasks');
 const completedTasks = document.getElementById('completed-tasks');
+const deleteAll = document.getElementById('delete-all');
+
+newInput.focus();
 
 //タスク読み込み
 function loadTasks(){
@@ -30,7 +33,7 @@ function renderTasks() {
         const createdDate = formatDate(new Date(task.createdAt));
         const createdSpan = document.createElement('span');
         createdSpan.classList.add('task-date');
-        createdSpan.textContent = `(作成:${createdDate})`;
+        createdSpan.textContent = `作成:${createdDate}`;
         li.appendChild(createdSpan);
 
         if(task.completed) {    //完了済みのタスク
@@ -38,7 +41,7 @@ function renderTasks() {
             const completedDate = formatDate(new Date(task.completedAt));
             const completedSpan = document.createElement('span');
             completedSpan.classList.add('task-date');
-            completedSpan.textContent = `（完了:${completedDate}）`;
+            completedSpan.textContent = `完了:${completedDate}`;
             li.appendChild(completedSpan);
 
             //削除ボタンの表示
@@ -157,3 +160,9 @@ function removeCompletedTasks(){
 }
 removeCompletedTasks();
 
+//全削除機能
+clearAllTasksButton.addEventListener('click', () => {
+    tasks = [];
+    saveTasks();
+    renderTasks();
+});
