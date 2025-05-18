@@ -61,6 +61,16 @@ li:hover .task-date {
   display: block;
 }
 
+#completed-tasks li {
+    color: gray;
+    background-color: white;
+    border: 1px solid gray;
+}
+
+#completed-tasks span {
+    text-decoration: line-through;
+}
+
 li button {
     border: none;
     color: red;
@@ -68,13 +78,6 @@ li button {
     height: 100%;
     width: 4vh;
     border: 1px solid red;
-}
-
-#completed-tasks li {
-    color: gray;
-    background-color: white;
-    border: 1px solid gray;
-    text-decoration: line-through;
 }
 
 input {
