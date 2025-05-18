@@ -62,12 +62,12 @@ li:hover .task-date {
 }
 
 #completed-tasks li {
-    color: gray;
     background-color: white;
     border: 1px solid gray;
 }
 
-#completed-tasks span {
+#completed-tasks span:nth-child(1) {
+    color: gray;
     text-decoration: line-through;
 }
 
