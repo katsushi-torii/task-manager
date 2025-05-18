@@ -1,0 +1,7 @@
+li .task-date {
+  display: none; /* デフォルトで非表示 */
+}
+
+li:hover .task-date {
+  display: inline; /* ホバー時に表示 */
+}
