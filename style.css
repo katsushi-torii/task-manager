@@ -70,6 +70,13 @@ li button {
     border: 1px solid red;
 }
 
+#completed-tasks li {
+    color: gray;
+    background-color: white;
+    border: 1px solid gray;
+    text-decoration: line-through;
+}
+
 input {
     width: 60vh;
     height: 5vh;
@@ -83,7 +90,7 @@ input:focus{
     background-color: white;
 }
 
-.delete-all {
+#delete-all {
     margin-top: 3vh;
     color: white;
     background-color: red;

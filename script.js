@@ -161,7 +161,8 @@ function removeCompletedTasks(){
 removeCompletedTasks();
 
 //全削除機能
-clearAllTasksButton.addEventListener('click', () => {
+deleteAll.addEventListener('click', () => {
+    console.log("test")
     tasks = [];
     saveTasks();
     renderTasks();
